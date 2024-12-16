@@ -8,6 +8,5 @@ namespace chaincue_real_estate_aspnet.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-
     }
 }
