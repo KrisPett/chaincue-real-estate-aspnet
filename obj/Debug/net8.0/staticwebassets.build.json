@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "3qUm6mK2XWXmx3Hi7mBp362fSDj6N7DZPQY5OBQqBDw=",
+  "Source": "chaincue-real-estate-aspnet",
+  "BasePath": "_content/chaincue-real-estate-aspnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

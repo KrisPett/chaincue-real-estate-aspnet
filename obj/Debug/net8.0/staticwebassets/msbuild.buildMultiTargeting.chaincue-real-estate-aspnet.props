@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\chaincue-real-estate-aspnet.props" />
+</Project>

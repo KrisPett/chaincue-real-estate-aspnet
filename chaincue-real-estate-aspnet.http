@@ -1,0 +1,6 @@
+@chaincue_real_estate_aspnet_HostAddress = http://localhost:5162
+
+GET {{chaincue_real_estate_aspnet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
