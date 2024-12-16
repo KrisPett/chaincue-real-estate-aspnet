@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using chaincue_real_estate_aspnet.Data;
 
@@ -11,9 +12,11 @@ using chaincue_real_estate_aspnet.Data;
 namespace chaincue_real_estate_aspnet.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241216154226_add-house")]
+    partial class addhouse
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +37,7 @@ namespace chaincue_real_estate_aspnet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("countries");
                 });
 
             modelBuilder.Entity("chaincue_real_estate_aspnet.Models.House", b =>
@@ -81,7 +84,7 @@ namespace chaincue_real_estate_aspnet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Houses");
+                    b.ToTable("houses");
                 });
 #pragma warning restore 612, 618
         }

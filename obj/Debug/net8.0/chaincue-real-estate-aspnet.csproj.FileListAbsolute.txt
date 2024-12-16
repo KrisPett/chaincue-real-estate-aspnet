@@ -170,3 +170,4 @@ C:\Users\Kris\source\repos\chaincue-real-estate-aspnet\obj\Debug\net8.0\refint\c
 C:\Users\Kris\source\repos\chaincue-real-estate-aspnet\obj\Debug\net8.0\chaincue-real-estate-aspnet.pdb
 C:\Users\Kris\source\repos\chaincue-real-estate-aspnet\obj\Debug\net8.0\chaincue-real-estate-aspnet.genruntimeconfig.cache
 C:\Users\Kris\source\repos\chaincue-real-estate-aspnet\obj\Debug\net8.0\ref\chaincue-real-estate-aspnet.dll
+C:\Users\Kris\source\repos\chaincue-real-estate-aspnet\obj\Debug\net8.0\chaincue-real-estate-aspnet.sourcelink.json

@@ -1,3 +1,4 @@
+using System;
 using chaincue_real_estate_aspnet.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,5 +27,12 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Seed data
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    DataSeeder.SeedData(dbContext);
+}
 
 app.Run();
