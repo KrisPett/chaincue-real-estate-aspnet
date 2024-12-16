@@ -1,5 +1,6 @@
-Package Manager Console
+# Package Manager Console
 
-Install-Package Microsoft.EntityFrameworkCore.SqlServer
+- Install-Package Microsoft.EntityFrameworkCore.SqlServer
+- add-migration init
+- update-database
 
-add-migration init
