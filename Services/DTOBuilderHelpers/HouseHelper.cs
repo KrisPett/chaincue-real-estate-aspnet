@@ -21,7 +21,6 @@ namespace chaincue_real_estate_aspnet.Services.DTOBuilderHelpers
             };
         }
 
-        // Method to update DTO with a list of houses
         public Func<B, B> UpdateDTOBuilderWithHouses<B>(Action<B, List<House>> setHouses)
         {
             return dtoBuilder =>
