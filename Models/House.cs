@@ -13,6 +13,8 @@
         public bool Sold { get; set; }
         public required string HouseTypes { get; set; }
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+        public List<HouseImage> Images { get; set; } = new List<HouseImage>();
+        public Broker? Broker { get; set; }
 
         public enum HouseTypesEnum
         {

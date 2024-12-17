@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "chaincue_real_estate_aspnet.Controllers.AcccountView.AccountController",
+    "Method": "GetAccountPage",
+    "RelativePath": "account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "chaincue_real_estate_aspnet.Controllers.HomeView.HomePageController",
     "Method": "GetHomePage",
     "RelativePath": "home",
@@ -10,24 +20,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "chaincue_real_estate_aspnet.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "chaincue_real_estate_aspnet.Controllers.HouseView.HouseController",
+    "Method": "GetHousePage",
+    "RelativePath": "house/{houseId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[chaincue_real_estate_aspnet.WeatherForecast, chaincue-real-estate-aspnet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "houseId",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]

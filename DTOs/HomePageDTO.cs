@@ -4,6 +4,7 @@
     {
         public required CountryDTO[] Countries { get; set; }
         public required HouseDTO[] RecentlyAddedHouses { get; set; }
+
         public class CountryDTO
         {
             public required string Name { get; set; }

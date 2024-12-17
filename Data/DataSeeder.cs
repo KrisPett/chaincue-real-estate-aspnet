@@ -11,8 +11,8 @@ namespace chaincue_real_estate_aspnet.Data
             context.Database.EnsureCreated();
 
             // Add Brokers
-            //var broker = new Broker { Name = "Default Broker" };
-            //context.Brokers.Add(broker);
+            var broker = new Broker { Name = "Default Broker", Email = "email", PhoneNumber = "000" };
+            context.Brokers.Add(broker);
 
             // Add Countries
             var countries = new List<Country>
@@ -33,17 +33,18 @@ namespace chaincue_real_estate_aspnet.Data
                     NumberRooms = 3,
                     Beds = 2,
                     Price = "$969,384",
-                    Src = ""
+                    Src = "",
+                    Broker = broker
                 };
 
                 // Add Images for Each House
-                //for (int j = 1; j <= 7; j++)
-                //{
-                //    house.Images.Add(new HouseImage
-                //    {
-                //        ImageUrl = $"https://example.com/house{i}/image{j}.jpg"
-                //    });
-                //}
+                for (int j = 1; j <= 7; j++)
+                {
+                    house.Images.Add(new HouseImage
+                    {
+                        Url = $"https://example.com/house{i}/image{j}.jpg"
+                    });
+                }
 
                 houses.Add(house);
             }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("chaincue-real-estate-aspnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a85d903af227488aef1de713358ed1dfaf539ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b709146a9cfc08d4da6519f923fc9ae50f43a479")]
 [assembly: System.Reflection.AssemblyProductAttribute("chaincue-real-estate-aspnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("chaincue-real-estate-aspnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

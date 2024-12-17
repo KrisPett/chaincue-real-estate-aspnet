@@ -1,10 +1,16 @@
 using System;
 using chaincue_real_estate_aspnet.Data;
+using chaincue_real_estate_aspnet.Services;
+using chaincue_real_estate_aspnet.Services.DTOBuilderHelpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<CountryService>();
+builder.Services.AddScoped<HouseService>();
+builder.Services.AddScoped<CountryHelper>();
+builder.Services.AddScoped<HouseHelper>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

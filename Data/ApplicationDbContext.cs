@@ -10,5 +10,12 @@ namespace chaincue_real_estate_aspnet.Data
 
         public DbSet<Country> Countries { get; set; }
         public DbSet<House> Houses { get; set; }
+        public DbSet<Broker> Brokers { get; set; }
+        public DbSet<HouseImage> HouseImage { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

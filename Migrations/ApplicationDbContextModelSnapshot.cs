@@ -22,6 +22,29 @@ namespace chaincue_real_estate_aspnet.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("chaincue_real_estate_aspnet.Models.Broker", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brokers");
+                });
+
             modelBuilder.Entity("chaincue_real_estate_aspnet.Models.Country", b =>
                 {
                     b.Property<Guid>("Id")
@@ -45,6 +68,9 @@ namespace chaincue_real_estate_aspnet.Migrations
 
                     b.Property<int>("Beds")
                         .HasColumnType("int");
+
+                    b.Property<Guid?>("BrokerId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -81,7 +107,50 @@ namespace chaincue_real_estate_aspnet.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BrokerId");
+
                     b.ToTable("Houses");
+                });
+
+            modelBuilder.Entity("chaincue_real_estate_aspnet.Models.HouseImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("HouseId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HouseId");
+
+                    b.ToTable("HouseImage");
+                });
+
+            modelBuilder.Entity("chaincue_real_estate_aspnet.Models.House", b =>
+                {
+                    b.HasOne("chaincue_real_estate_aspnet.Models.Broker", "Broker")
+                        .WithMany()
+                        .HasForeignKey("BrokerId");
+
+                    b.Navigation("Broker");
+                });
+
+            modelBuilder.Entity("chaincue_real_estate_aspnet.Models.HouseImage", b =>
+                {
+                    b.HasOne("chaincue_real_estate_aspnet.Models.House", null)
+                        .WithMany("Images")
+                        .HasForeignKey("HouseId");
+                });
+
+            modelBuilder.Entity("chaincue_real_estate_aspnet.Models.House", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
